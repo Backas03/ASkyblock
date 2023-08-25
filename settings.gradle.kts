@@ -1,1 +1,1 @@
-rootProject.name = "IridiumSkyblock"
+rootProject.name = "ASkyblock-Redifined"
