@@ -114,8 +114,7 @@ public class IridiumSkyblock extends IridiumTeams<Island, User> {
 
         Bukkit.getServer().getOnlinePlayers().forEach(player -> getIslandManager().sendIslandBorder(player));
 
-        addBstats(5825);
-        startUpdateChecker(62480);
+        addBstats(5825); // TODO: remove bstats?
         super.onEnable();
     }
 
@@ -127,6 +126,8 @@ public class IridiumSkyblock extends IridiumTeams<Island, User> {
         }
         return economyProvider.getProvider();
     }
+
+
 
     @Override
     public void registerListeners() {
