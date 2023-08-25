@@ -1,8 +1,8 @@
-name: IridiumSkyblock
+name: ASkyblock-Redefined
 version: ${version}
 description: Skyblock Redefined
 main: com.iridium.iridiumskyblock.IridiumSkyblock
-api-version: '1.13'
+api-version: '1.13' # TODO: 1.19?
 author: Peaches_MLG
 depend: [ Vault ]
 softdepend:
