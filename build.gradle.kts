@@ -12,17 +12,18 @@ buildscript {
     }
 }
 
-group = "com.iridium"
-version = "4.0.5"
-description = "IridiumSkyblock"
+group = "org.caramel.backas"
+version = "0.1.0"
+description = "ASkyblock Redefined"
 
 repositories {
-    maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    maven(url = "https://repo.caramel.moe/repository/maven-public/") // caramel-repo
+    maven(url = "https://papermc.io/repo/repository/maven-public/") // papermc-repo
     maven("https://ci.ender.zone/plugin/repository/everything/")
     maven("https://nexus.iridiumdevelopment.net/repository/maven-releases/")
     maven("https://papermc.io/repo/repository/maven-public/")
     maven("https://jitpack.io")
-    maven("https://maven.enginehub.org/repo/")
+    maven("https://maven.enginehub.org/repo/") // WorldEdit
     mavenCentral()
 }
 
@@ -34,11 +35,21 @@ dependencies {
     implementation("com.iridium", "IridiumTeams", "2.1.4")
 
     // Other dependencies that are not required or already available at runtime
-    compileOnly("org.projectlombok", "lombok", "1.18.26")
-    compileOnly("org.spigotmc", "spigot-api", "1.19.4-R0.1-SNAPSHOT")
-    compileOnly("com.github.MilkBowl", "VaultAPI", "1.7")
-    compileOnly("net.ess3", "EssentialsXSpawn", "2.16.1")
+    /* WorldEdit */
     compileOnly("com.sk89q.worldedit", "worldedit-bukkit", "7.2.13-SNAPSHOT")
+
+    /* Daydream API */
+    compileOnly("moe.caramel", "daydream-api", "1.19.4-R0.1-SNAPSHOT")
+
+    /* Vault API */  // TODO: use tiny vault?
+    compileOnly("com.github.MilkBowl", "VaultAPI", "1.7")
+
+    /* Essentials Spawn */
+    compileOnly("net.ess3", "EssentialsXSpawn", "2.16.1")
+
+    /* Lombok */
+    compileOnly("org.projectlombok", "lombok", "1.18.26")
+    annotationProcessor("org.projectlombok:lombok:1.18.26")
 }
 
 // Set the Java version and vendor
