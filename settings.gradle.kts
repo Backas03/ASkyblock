@@ -1,1 +1,1 @@
-rootProject.name = "ASkyblock-Redifined"
+rootProject.name = "ASkyblock-Redefined"
