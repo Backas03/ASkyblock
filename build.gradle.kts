@@ -90,7 +90,7 @@ tasks {
         val name = if (names.size == 0) "build" else names[0]
 
         val exc = "The build path doesn't exist. Build it on the default path."
-        val localProperties = project.rootProject.file("local.properties")
+        val localProperties = project.file("local.properties")
         try {
             val properties = Properties()
             val stream = localProperties.inputStream()
