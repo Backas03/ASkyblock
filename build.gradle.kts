@@ -102,7 +102,7 @@ tasks {
             } else println(exc)
             stream.close()
         } catch (ignored: Exception) {
-            localProperties.writeText("buildDir=\ndeployDir=\n")
+            localProperties.writeText("buildDir=")
             println(exc)
         }
     }
